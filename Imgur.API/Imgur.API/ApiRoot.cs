@@ -46,6 +46,9 @@ namespace Imgur.API
 
         public void Init(string apiKey, string apiSecret)
         {
+            var authService = new AuthenticationService(apiKey, apiSecret);
+          
+
             //var authService = new AuthenticationService(apiKey, apiSecret);
             ////authService.RefreshTokenAsync();
             //authService.AccessTokenRefreshed += authService_AccessTokenRefreshed;

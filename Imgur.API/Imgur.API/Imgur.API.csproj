@@ -35,7 +35,6 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
-    <Folder Include="Model\" />
     <Folder Include="Service\" />
   </ItemGroup>
   <ItemGroup>
@@ -44,7 +43,34 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiRoot.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Factory\HttpClientFactory.cs" />
+    <Compile Include="Factory\IHttpClientFactory.cs" />
     <Compile Include="IApiRoot.cs" />
+    <Compile Include="Model\account.cs" />
+    <Compile Include="Model\AccountSettings.cs" />
+    <Compile Include="Model\Album.cs" />
+    <Compile Include="Model\BlockedUser.cs" />
+    <Compile Include="Model\Comment.cs" />
+    <Compile Include="Model\CommentPreview.cs" />
+    <Compile Include="Model\Content.cs" />
+    <Compile Include="Model\Content2.cs" />
+    <Compile Include="Model\Conversation.cs" />
+    <Compile Include="Model\CustomGallery.cs" />
+    <Compile Include="Model\Following.cs" />
+    <Compile Include="Model\GalleryAlbum.cs" />
+    <Compile Include="Model\GalleryImage.cs" />
+    <Compile Include="Model\GalleryProfile.cs" />
+    <Compile Include="Model\Image.cs" />
+    <Compile Include="Model\Message.cs" />
+    <Compile Include="Model\Notification.cs" />
+    <Compile Include="Model\Reply.cs" />
+    <Compile Include="Model\RootElement.cs" />
+    <Compile Include="Model\Tag.cs" />
+    <Compile Include="Model\TagVote.cs" />
+    <Compile Include="Model\Topic.cs" />
+    <Compile Include="Model\Trophy.cs" />
+    <Compile Include="Model\Vote.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
