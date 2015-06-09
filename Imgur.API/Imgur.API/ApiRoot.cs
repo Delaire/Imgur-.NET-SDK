@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Imgur.API.Service;
 
 namespace Imgur.API
 {
@@ -47,10 +48,7 @@ namespace Imgur.API
         public void Init(string apiKey, string apiSecret)
         {
             var authService = new AuthenticationService(apiKey, apiSecret);
-          
-
-            //var authService = new AuthenticationService(apiKey, apiSecret);
-            ////authService.RefreshTokenAsync();
+            authService.AuthenticateAsync();
             //authService.AccessTokenRefreshed += authService_AccessTokenRefreshed;
 
             IsInitialized = true;

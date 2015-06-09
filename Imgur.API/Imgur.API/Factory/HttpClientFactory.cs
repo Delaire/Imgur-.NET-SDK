@@ -11,21 +11,5 @@ namespace Imgur.API.Factory
                         new HttpClientHandler() { AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip }
                         );
         }
-
-
-        public HttpClient CreateHttpClient(bool useGzip, int maxRequestContentBufferSize)
-        {
-            var handler = new HttpClientHandler()
-            {
-                MaxRequestContentBufferSize = maxRequestContentBufferSize
-            };
-
-            if (useGzip)
-            {
-                handler.AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip;
-            }
-
-            return new HttpClient(handler);
-        }
     }
 }
