@@ -7,6 +7,6 @@ This is an ALPHA 0.1 and is currently not working
 
 Author:
 Damien Delaire
+if you wish to help be my guest!
 
-Helpers:
 
