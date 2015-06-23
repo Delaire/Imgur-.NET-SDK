@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Imgur.API.Ioc;
 using Imgur.API.Model;
 
 namespace Imgur.API.Service
@@ -27,7 +28,7 @@ namespace Imgur.API.Service
         {
             if (_authenticationService == null)
             {
-                _authenticationService = IoCContainer.Instance.GetSingleton<IAuthenticationService>();
+                _authenticationService = SimpleIoc.Default.GetInstance<IAuthenticationService>();
             }
 
             return _authenticationService;

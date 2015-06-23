@@ -12,12 +12,13 @@ namespace Imgur.API
         public const string AUTHENTICATION_SECRET = "https://api.imgur.com/oauth2/secret";
         public const string AUTHENTICATION_addclient = "https://api.imgur.com/oauth2/addclient";
         public const string AUTHENTICATION_authorize = "https://api.imgur.com/oauth2/authorize";
+        public const string AUTHENTICATION_LOGOUT_URL = "https://api.imgur.com/oauth2/authorize";
 
         public const string URL_BASE = "https://api.imgur.com/3/";
 
-        public const string URL_ADVANCEDAPI = URL_BASE + "json";
+        public const string URL_BASEAPI = URL_BASE;
         public const string ADVANCEDAPI_OAUTHTOKEN = "oauth_token={0}";
 
-
+        public const int PAGED_REQUEST_DEFAULT_PAGE = 0;
     }
 }

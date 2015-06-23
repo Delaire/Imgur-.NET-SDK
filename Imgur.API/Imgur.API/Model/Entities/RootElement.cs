@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
-namespace Imgur.API.Model
+namespace Imgur.API.Model.Entities
 {
     public class RootElement<T>
     {
-        public T data { get; set; }
+        public IList<T> data { get; set; }
         public int status { get; set; }
         public bool success { get; set; }
     }

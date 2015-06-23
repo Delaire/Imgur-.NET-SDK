@@ -41,11 +41,16 @@
     <Compile Include="ApiRoot.cs" />
     <Compile Include="AsyncManualResetEvent.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="EndPoints\BasicEndPointOptions.cs" />
+    <Compile Include="EndPoints\Gallery\gallery.cs" />
+    <Compile Include="Exceptions\ApiException.cs" />
+    <Compile Include="Exceptions\ServerErrorApiException.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Factory\HttpClientFactory.cs" />
     <Compile Include="Factory\IHttpClientFactory.cs" />
     <Compile Include="IApiRoot.cs" />
     <Compile Include="Ioc\ISimpleIoc.cs" />
+    <Compile Include="Ioc\PreferredConstructorAttribute.cs" />
     <Compile Include="Ioc\SimpleIoc.cs" />
     <Compile Include="Model\AccessToken.cs" />
     <Compile Include="Model\Enum\AccessTokenStatus.cs" />
@@ -74,13 +79,20 @@
     <Compile Include="Model\Entities\Topic.cs" />
     <Compile Include="Model\Entities\Trophy.cs" />
     <Compile Include="Model\Entities\Vote.cs" />
+    <Compile Include="Model\Enum\Section.cs" />
+    <Compile Include="Model\Enum\Sort.cs" />
+    <Compile Include="Model\Enum\Windows.cs" />
+    <Compile Include="Model\Error.cs" />
+    <Compile Include="Model\Requests\AdvRequest.cs" />
+    <Compile Include="Model\Requests\RequestBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service\AuthenticatedServiceBase.cs" />
-    <Compile Include="Service\AuthenticationService.cs" />
-    <Compile Include="Service\AuthenticationService\AccessTokenEventArgs.cs" />
-    <Compile Include="Service\DataService\DataService.cs" />
-    <Compile Include="Service\DataService\IDataService.cs" />
-    <Compile Include="Service\HttpServiceBase.cs" />
+    <Compile Include="Services\AuthenticatedServiceBase.cs" />
+    <Compile Include="Services\AuthenticationService\AuthenticationService.cs" />
+    <Compile Include="Services\AuthenticationService\AccessTokenEventArgs.cs" />
+    <Compile Include="Services\AuthenticationService\IAuthenticationService.cs" />
+    <Compile Include="Services\DataService\DataService.cs" />
+    <Compile Include="Services\DataService\IDataService.cs" />
+    <Compile Include="Services\HttpServiceBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59d6d24383174ac4, processorArchitecture=MSIL">
@@ -111,6 +123,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">

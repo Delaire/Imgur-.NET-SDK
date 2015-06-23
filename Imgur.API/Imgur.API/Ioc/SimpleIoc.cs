@@ -63,6 +63,19 @@ namespace Imgur.API.Ioc
 
         private static SimpleIoc _default;
 
+        ////Added Init prop
+        //internal static SimpleIoc Initialize()
+        //{
+        //    if (Default != null)
+        //    {
+        //        return Default;
+        //    }
+
+        //    // create a new ioc container - it will register itself as the singleton
+        //    _default = new SimpleIoc();
+        //    return Default;
+        //}
+
         /// <summary>
         /// This class' default instance.
         /// </summary>
@@ -232,11 +245,11 @@ namespace Imgur.API.Ioc
             where TClass : class
         {
             var classType = typeof(TClass);
-#if NETFX_CORE
+//#if NETFX_CORE
             if (classType.GetTypeInfo().IsInterface)
-#else
-            if (classType.IsInterface)
-#endif
+//#else
+//            if (classType.IsInterface)
+//#endif
             {
                 throw new ArgumentException("An interface cannot be registered alone.");
             }
@@ -621,11 +634,11 @@ namespace Imgur.API.Ioc
                 resolveTo = serviceType;
             }
 
-#if NETFX_CORE
+//#if NETFX_CORE
             var constructorInfos = resolveTo.GetTypeInfo().DeclaredConstructors.Where(c => c.IsPublic).ToArray();
-#else
-            var constructorInfos = resolveTo.GetConstructors();
-#endif
+//#else
+//            var constructorInfos = resolveTo.GetConstructors();
+//#endif
 
             if (constructorInfos.Length > 1)
             {
@@ -666,11 +679,11 @@ namespace Imgur.API.Ioc
         {
             var preferredConstructorInfo
                 = (from t in constructorInfos
-#if NETFX_CORE
+//#if NETFX_CORE
                     let attribute = t.GetCustomAttribute(typeof(PreferredConstructorAttribute))
-#else
-                    let attribute = Attribute.GetCustomAttribute(t, typeof(PreferredConstructorAttribute))
-#endif
+//#else
+//                    let attribute = Attribute.GetCustomAttribute(t, typeof(PreferredConstructorAttribute))
+//#endif
                     where attribute != null
                     select t).FirstOrDefault();
 

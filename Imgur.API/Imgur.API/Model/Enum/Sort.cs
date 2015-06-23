@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Imgur.API.Service.DataService
+namespace Imgur.API.Model.Enum
 {
-    public interface IDataService
+    public enum Sort
     {
-        Task<T> MakeRequest<T>(RequestBase req);
+        viral,
+        top,
+        time
     }
 }
