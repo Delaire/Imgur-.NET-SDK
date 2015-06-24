@@ -12,6 +12,13 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Imgur.API;
+using Imgur.API.EndPoints;
+using Imgur.API.EndPoints.Gallery;
+using Imgur.API.Model.Enum;
+using System.Net.Http;
+using Imgur.API.Model.Entities;
+
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -34,15 +41,21 @@ namespace Imgur.SampleApp
         /// </summary>
         /// <param name="e">Event data that describes how this page was reached.
         /// This parameter is typically used to configure the page.</param>
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
-            // TODO: Prepare page for display here.
+            ApiRoot.Instance.Init("XXXXXXXX", "XXXXXX");
+           
 
-            // TODO: If your application contains multiple pages, ensure that you are
-            // handling the hardware Back button by registering for the
-            // Windows.Phone.UI.Input.HardwareButtons.BackPressed event.
-            // If you are using the NavigationHelper provided by some templates,
-            // this event is handled for you.
+
+            var result = await ApiRoot.Instance.GetEndPointEntityAsync<RootElement<GalleryImage>>(
+                new Gallery()
+                {
+                    page = 0,
+                    section = Section.hot.ToString(),
+                    showViral = true,
+                    sort = Sort.top.ToString(),
+                    window = Imgur.API.Model.Enum.Windows.day.ToString(),
+                });
         }
     }
 }

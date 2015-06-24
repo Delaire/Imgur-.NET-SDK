@@ -13,11 +13,22 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Imgur.SampleApp.Windows", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Imgur.SampleApp.WindowsPhone", "Imgur.SampleApp\Imgur.SampleApp.WindowsPhone\Imgur.SampleApp.WindowsPhone.csproj", "{0F353CE9-C741-4E74-9133-F8388E032A3B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ImgurAppUniversal", "ImgurAppUniversal", "{4201AD14-E369-4DE2-AFC6-604E584F3A6D}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ImgurAppUniversal.Shared", "..\..\ImgurAppUniversal\ImgurAppUniversal\ImgurAppUniversal.Shared\ImgurAppUniversal.Shared.shproj", "{6B9CB6C7-A4D6-40EA-8395-A8CCB0131355}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImgurAppUniversal.Windows", "..\..\ImgurAppUniversal\ImgurAppUniversal\ImgurAppUniversal.Windows\ImgurAppUniversal.Windows.csproj", "{BDD5BEBB-3317-49D2-BEC0-2AB3710649D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImgurAppUniversal.WindowsPhone", "..\..\ImgurAppUniversal\ImgurAppUniversal\ImgurAppUniversal.WindowsPhone\ImgurAppUniversal.WindowsPhone.csproj", "{F998FFDA-CACD-46E7-AFE3-2F140A28F931}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\..\ImgurAppUniversal\ImgurAppUniversal\ImgurAppUniversal.Shared\ImgurAppUniversal.Shared.projitems*{bdd5bebb-3317-49d2-bec0-2ab3710649d3}*SharedItemsImports = 4
 		Imgur.SampleApp\Imgur.SampleApp.Shared\Imgur.SampleApp.Shared.projitems*{631bc080-db2b-44d8-b28b-674f826966a3}*SharedItemsImports = 4
+		..\..\ImgurAppUniversal\ImgurAppUniversal\ImgurAppUniversal.Shared\ImgurAppUniversal.Shared.projitems*{f998ffda-cacd-46e7-afe3-2f140a28f931}*SharedItemsImports = 4
 		Imgur.SampleApp\Imgur.SampleApp.Shared\Imgur.SampleApp.Shared.projitems*{0f353ce9-c741-4e74-9133-f8388e032a3b}*SharedItemsImports = 4
 		Imgur.SampleApp\Imgur.SampleApp.Shared\Imgur.SampleApp.Shared.projitems*{759cde25-1457-4edc-aa34-536bbd4bc471}*SharedItemsImports = 13
+		..\..\ImgurAppUniversal\ImgurAppUniversal\ImgurAppUniversal.Shared\ImgurAppUniversal.Shared.projitems*{6b9cb6c7-a4d6-40ea-8395-a8ccb0131355}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -84,6 +95,50 @@ Global
 		{0F353CE9-C741-4E74-9133-F8388E032A3B}.Release|x86.ActiveCfg = Release|x86
 		{0F353CE9-C741-4E74-9133-F8388E032A3B}.Release|x86.Build.0 = Release|x86
 		{0F353CE9-C741-4E74-9133-F8388E032A3B}.Release|x86.Deploy.0 = Release|x86
+		{BDD5BEBB-3317-49D2-BEC0-2AB3710649D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDD5BEBB-3317-49D2-BEC0-2AB3710649D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDD5BEBB-3317-49D2-BEC0-2AB3710649D3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BDD5BEBB-3317-49D2-BEC0-2AB3710649D3}.Debug|ARM.ActiveCfg = Debug|ARM
+		{BDD5BEBB-3317-49D2-BEC0-2AB3710649D3}.Debug|ARM.Build.0 = Debug|ARM
+		{BDD5BEBB-3317-49D2-BEC0-2AB3710649D3}.Debug|ARM.Deploy.0 = Debug|ARM
+		{BDD5BEBB-3317-49D2-BEC0-2AB3710649D3}.Debug|x64.ActiveCfg = Debug|x64
+		{BDD5BEBB-3317-49D2-BEC0-2AB3710649D3}.Debug|x64.Build.0 = Debug|x64
+		{BDD5BEBB-3317-49D2-BEC0-2AB3710649D3}.Debug|x64.Deploy.0 = Debug|x64
+		{BDD5BEBB-3317-49D2-BEC0-2AB3710649D3}.Debug|x86.ActiveCfg = Debug|x86
+		{BDD5BEBB-3317-49D2-BEC0-2AB3710649D3}.Debug|x86.Build.0 = Debug|x86
+		{BDD5BEBB-3317-49D2-BEC0-2AB3710649D3}.Debug|x86.Deploy.0 = Debug|x86
+		{BDD5BEBB-3317-49D2-BEC0-2AB3710649D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDD5BEBB-3317-49D2-BEC0-2AB3710649D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDD5BEBB-3317-49D2-BEC0-2AB3710649D3}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{BDD5BEBB-3317-49D2-BEC0-2AB3710649D3}.Release|ARM.ActiveCfg = Release|ARM
+		{BDD5BEBB-3317-49D2-BEC0-2AB3710649D3}.Release|ARM.Build.0 = Release|ARM
+		{BDD5BEBB-3317-49D2-BEC0-2AB3710649D3}.Release|ARM.Deploy.0 = Release|ARM
+		{BDD5BEBB-3317-49D2-BEC0-2AB3710649D3}.Release|x64.ActiveCfg = Release|x64
+		{BDD5BEBB-3317-49D2-BEC0-2AB3710649D3}.Release|x64.Build.0 = Release|x64
+		{BDD5BEBB-3317-49D2-BEC0-2AB3710649D3}.Release|x64.Deploy.0 = Release|x64
+		{BDD5BEBB-3317-49D2-BEC0-2AB3710649D3}.Release|x86.ActiveCfg = Release|x86
+		{BDD5BEBB-3317-49D2-BEC0-2AB3710649D3}.Release|x86.Build.0 = Release|x86
+		{BDD5BEBB-3317-49D2-BEC0-2AB3710649D3}.Release|x86.Deploy.0 = Release|x86
+		{F998FFDA-CACD-46E7-AFE3-2F140A28F931}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F998FFDA-CACD-46E7-AFE3-2F140A28F931}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F998FFDA-CACD-46E7-AFE3-2F140A28F931}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F998FFDA-CACD-46E7-AFE3-2F140A28F931}.Debug|ARM.ActiveCfg = Debug|ARM
+		{F998FFDA-CACD-46E7-AFE3-2F140A28F931}.Debug|ARM.Build.0 = Debug|ARM
+		{F998FFDA-CACD-46E7-AFE3-2F140A28F931}.Debug|ARM.Deploy.0 = Debug|ARM
+		{F998FFDA-CACD-46E7-AFE3-2F140A28F931}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F998FFDA-CACD-46E7-AFE3-2F140A28F931}.Debug|x86.ActiveCfg = Debug|x86
+		{F998FFDA-CACD-46E7-AFE3-2F140A28F931}.Debug|x86.Build.0 = Debug|x86
+		{F998FFDA-CACD-46E7-AFE3-2F140A28F931}.Debug|x86.Deploy.0 = Debug|x86
+		{F998FFDA-CACD-46E7-AFE3-2F140A28F931}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F998FFDA-CACD-46E7-AFE3-2F140A28F931}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F998FFDA-CACD-46E7-AFE3-2F140A28F931}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F998FFDA-CACD-46E7-AFE3-2F140A28F931}.Release|ARM.ActiveCfg = Release|ARM
+		{F998FFDA-CACD-46E7-AFE3-2F140A28F931}.Release|ARM.Build.0 = Release|ARM
+		{F998FFDA-CACD-46E7-AFE3-2F140A28F931}.Release|ARM.Deploy.0 = Release|ARM
+		{F998FFDA-CACD-46E7-AFE3-2F140A28F931}.Release|x64.ActiveCfg = Release|Any CPU
+		{F998FFDA-CACD-46E7-AFE3-2F140A28F931}.Release|x86.ActiveCfg = Release|x86
+		{F998FFDA-CACD-46E7-AFE3-2F140A28F931}.Release|x86.Build.0 = Release|x86
+		{F998FFDA-CACD-46E7-AFE3-2F140A28F931}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -92,5 +147,8 @@ Global
 		{759CDE25-1457-4EDC-AA34-536BBD4BC471} = {D8BF9A2A-1CED-4229-B1DB-1FA78070FB0D}
 		{631BC080-DB2B-44D8-B28B-674F826966A3} = {D8BF9A2A-1CED-4229-B1DB-1FA78070FB0D}
 		{0F353CE9-C741-4E74-9133-F8388E032A3B} = {D8BF9A2A-1CED-4229-B1DB-1FA78070FB0D}
+		{6B9CB6C7-A4D6-40EA-8395-A8CCB0131355} = {4201AD14-E369-4DE2-AFC6-604E584F3A6D}
+		{BDD5BEBB-3317-49D2-BEC0-2AB3710649D3} = {4201AD14-E369-4DE2-AFC6-604E584F3A6D}
+		{F998FFDA-CACD-46E7-AFE3-2F140A28F931} = {4201AD14-E369-4DE2-AFC6-604E584F3A6D}
 	EndGlobalSection
 EndGlobal

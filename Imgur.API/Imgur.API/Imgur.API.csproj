@@ -43,6 +43,7 @@
     <Compile Include="Constants.cs" />
     <Compile Include="EndPoints\BasicEndPointOptions.cs" />
     <Compile Include="EndPoints\Gallery\gallery.cs" />
+    <Compile Include="EndPoints\Topics.cs" />
     <Compile Include="Exceptions\ApiException.cs" />
     <Compile Include="Exceptions\ServerErrorApiException.cs" />
     <Compile Include="Extensions.cs" />
