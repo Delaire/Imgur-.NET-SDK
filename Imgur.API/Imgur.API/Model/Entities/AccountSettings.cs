@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Imgur.API.Model
+namespace Imgur.API.Model.Entities
 {
     public class AccountSettings
     {

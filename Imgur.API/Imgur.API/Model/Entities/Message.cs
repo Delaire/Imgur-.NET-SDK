@@ -1,3 +1,5 @@
+using Imgur.API.Model.Entities;
+
 namespace Imgur.API.Model
 {
     public class Message

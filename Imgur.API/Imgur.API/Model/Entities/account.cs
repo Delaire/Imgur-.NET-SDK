@@ -1,9 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Imgur.API.Model
+﻿namespace Imgur.API.Model.Entities
 {
     public class Account
     {

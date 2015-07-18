@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Imgur.API.Model.Entities;
 
 namespace Imgur.API.Model
 {
