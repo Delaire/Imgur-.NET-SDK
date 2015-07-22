@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Imgur.API.Ioc;
+using GalaSoft.MvvmLight.Ioc;
 using Imgur.API.Model;
 
 namespace Imgur.API.Service
