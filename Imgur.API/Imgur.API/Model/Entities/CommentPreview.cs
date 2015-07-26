@@ -34,7 +34,7 @@ namespace Imgur.API.Model
         public bool deleted { get; set; }
           [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public string vote { get; set; }
-        // [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public List<Comment> children { get; set; }
 
     }
