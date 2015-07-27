@@ -10,6 +10,8 @@ namespace Imgur.API.Model.Enum
     {
         viral,
         top,
-        time
+        time,
+        best,
+        @new
     }
 }
