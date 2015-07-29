@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GalaSoft.MvvmLight.Ioc;
+using Imgur.API.EndPoints.Gallery;
 using Imgur.API.Factory;
-using Imgur.API.Ioc;
+using Imgur.API.Model;
 using Imgur.API.Model.Requests;
 using Imgur.API.Service;
 using Imgur.API.Service.DataService;
@@ -44,31 +46,28 @@ namespace Imgur.API
         /// </summary>
         public bool IsInitialized { get; private set; }
 
+        public bool IsLoggedIn { get; set; }
+
         public string _clientId;
         public string ClientId
         {
             get { return _clientId; }
         }
 
-        public object AccessToken
+        public AccessToken AccessToken
         {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
+            get; set; 
         }
 
         public void Init(string clientId, string apiSecret)
         {
-            //SimpleIoc.Initialize();
-
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
 
             //Register Services
             SimpleIoc.Default.Register<IDataService, DataService>();
             SimpleIoc.Default.Register<IHttpClientFactory, HttpClientFactory>();
             SimpleIoc.Default.Register<IAuthenticationService, AuthenticationService>();
-
-
-
+            
             _clientId = clientId;
 
             var authService = new AuthenticationService(clientId, apiSecret);
@@ -80,7 +79,7 @@ namespace Imgur.API
 
 
 
-        public Task<object> AuthenticateAsync(string username, string password)
+        public Task<object> RefreshTokenAsync(string username, string password)
         {
             throw new NotImplementedException();
         }
@@ -92,6 +91,18 @@ namespace Imgur.API
                 await SimpleIoc.Default.GetInstance<IDataService>()
                     .GetEndPointEntityAsync<T>(req);
         }
+
+
+
+        public async Task<T> MakeQueryWithoutApiAuth<T>(RequestBase req)
+        {
+            return
+                (T) await SimpleIoc.Default.GetInstance<IDataService>()
+                    .MakeQueryWithoutApiAuth<T>(req);
+        }
+
+
+
 
         //public async Task<T> GetEndPointEntityAsync<T>(string Id, List<string> requestedFields)
 

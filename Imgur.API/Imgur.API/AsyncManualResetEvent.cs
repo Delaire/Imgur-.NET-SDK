@@ -22,7 +22,9 @@ namespace Imgur.API
             {
                 var tcs = m_tcs;
                 if (!tcs.Task.IsCompleted ||
+#pragma warning disable 420
                     Interlocked.CompareExchange(ref m_tcs, new TaskCompletionSource<bool>(), tcs) == tcs)
+#pragma warning restore 420
                     return;
             }
         }
