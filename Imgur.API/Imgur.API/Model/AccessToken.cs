@@ -27,11 +27,14 @@ namespace Imgur.API.Model
         [JsonProperty(PropertyName = "refresh_token")]
         public string RefreshToken { get; set; }
 
+        public string UserName { get; set; }
+        public string AccountId { get; set; }
+
         /// <summary>
         /// The length of time for which the token is valid, starting from the time it was requested
         /// </summary>
         [JsonProperty(PropertyName = "expires_in")]
-        public TimeSpan ExpiresIn { get; set; }
+        public string ExpiresIn { get; set; }
 
         /// <summary>
         /// The expected expiration time of the access token.
