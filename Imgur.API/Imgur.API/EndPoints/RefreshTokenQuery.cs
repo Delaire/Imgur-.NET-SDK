@@ -4,11 +4,11 @@ namespace Imgur.API.EndPoints.Gallery
 {
     public class RefreshTokenQuery : RequestBase
     {
-
-        public string token { get; set; }
-        public string refreshToken { get; set; }
-        public string accountName { get; set; }
-        public string accountId { get; set; }
+        //useless
+        //public string grant_type { get; set; }
+        //public string refresh_token { get; set; }
+        //public string client_id { get; set; }
+        //public string client_secret { get; set; }
 
         public override string CallIdentifier
         {
