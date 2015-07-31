@@ -10,11 +10,7 @@ namespace Imgur.API.Service
     public interface IAuthenticationService
     {
         AccessToken AccessToken { get; set; }
-
-        Task<AccessToken> AuthenticateAsync(string username, string password);
-
-        Task<AccessToken> AuthenticateAsync();
-
+        
         Task<AccessToken> RefreshTokenAsync();
 
         Task LogoutAsync();
