@@ -12,6 +12,7 @@
         NoServerResponse,
         InvalidUserAgent,
         NotAuthorized,
-        Inv
+        InvalidCredentials,
+        AuthenticationError
     }
 }
