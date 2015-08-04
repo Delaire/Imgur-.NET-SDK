@@ -18,7 +18,7 @@ namespace Imgur.API.EndPoints.Conversation
         //public string UserName { get; set; }
         //public string page { get; set; }
 
-       
+
 
         public override string CallIdentifier
         {
