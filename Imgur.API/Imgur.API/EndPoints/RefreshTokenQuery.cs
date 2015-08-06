@@ -15,5 +15,7 @@ namespace Imgur.API.EndPoints.Gallery
             //
             get { return string.Format("https://api.imgur.com/oauth2/token"); }
         }
+
+      
     }
 }
