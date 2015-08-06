@@ -26,6 +26,15 @@ namespace Imgur.API.Services.DataService
             {
                 throw new ArgumentNullException("req");
             }
+            //Check if query requires to be login user has login token
+            if (req.IsLoginRequired)
+            {
+                //Refresh the token if needed
+                if (!await CheckAuthTokenAsync())
+                {
+                    throw new ApiException("Could not obtain authorization to access Imgur Logged services", ApiExceptionType.NotAuthorized);
+                }
+            }
 
             ////TODO: see if we dont have this element already cached
             //var cachedEntity = await CheckCacheForRequestAsync<T>(req);
@@ -92,6 +101,14 @@ namespace Imgur.API.Services.DataService
         }
 
 
+        public async Task<T> PostEndPointEntityAsync<T>(RequestBase request)
+        {
+            request.Method = HttpMethod.Post;
+
+            return await MakeRequest<T>(request);
+        }
+
+
 
         public async Task<object> MakeQueryWithoutApiAuth<T>(RequestBase request)
         {
@@ -137,7 +154,7 @@ namespace Imgur.API.Services.DataService
 
 
 
-        
+
 
         public Task<TTarget> GetEndPointEntityAsync<TSource, TTarget>(RequestBase req, object Entity)
         {
@@ -151,10 +168,29 @@ namespace Imgur.API.Services.DataService
                 Constants.URL_BASEAPI,
                 req.CallIdentifier
                 );
-            
 
+            if (req.IsLoginRequired)
+            {
+                url = String.Format("{0}?oauth_token={1}", url, GetAuthService().AccessToken.Token);
+            }
+
+            //Creating query
             var message = new HttpRequestMessage(req.Method, url);
-            message.Headers.TryAddWithoutValidation("Authorization", "Client-ID "+ApiRoot.Instance.ClientId);
+
+            if (req.Method == HttpMethod.Post)
+            {
+                //adding post Query
+                message.Content = new StringContent((req as PostRequestBase).CallPostMessage);
+            }
+
+         
+
+            //var message = new HttpRequestMessage(HttpMethod.Post, url)
+            //{
+            //    Content = new StringContent(json)
+            //};
+
+            message.Headers.TryAddWithoutValidation("Authorization", "Client-ID " + ApiRoot.Instance.ClientId);
 
             return message;
         }
@@ -170,6 +206,6 @@ namespace Imgur.API.Services.DataService
 
         //    return message;
         //}
-        
+
     }
 }

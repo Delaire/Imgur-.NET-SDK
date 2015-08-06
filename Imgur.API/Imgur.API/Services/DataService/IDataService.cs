@@ -13,6 +13,7 @@ namespace Imgur.API.Service.DataService
         Task<T> MakeRequest<T>(RequestBase req);
 
         Task<T> GetEndPointEntityAsync<T>(RequestBase req);
+        Task<T> PostEndPointEntityAsync<T>(RequestBase req);
         Task<object> MakeQueryWithoutApiAuth<T>(RequestBase req);
 
         Task<TTarget> GetEndPointEntityAsync<TSource, TTarget>(RequestBase req, object Entity);
