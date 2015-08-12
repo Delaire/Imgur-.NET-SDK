@@ -27,7 +27,11 @@ namespace Imgur.API.Model
         [JsonProperty(PropertyName = "refresh_token")]
         public string RefreshToken { get; set; }
 
+
+        [JsonProperty(PropertyName = "account_username")]
         public string UserName { get; set; }
+
+        [JsonProperty(PropertyName = "account_id")]
         public string AccountId { get; set; }
 
         /// <summary>
@@ -61,8 +65,8 @@ namespace Imgur.API.Model
             }
         }
 
-       
 
-       
+
+
     }
 }
