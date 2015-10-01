@@ -48,7 +48,7 @@ namespace Imgur.SampleApp
 
 
             var result = await ApiRoot.Instance.GetEndPointEntityAsync<RootElement<GalleryImage>>(
-                new Gallery()
+                new GetGalleryImage	())Gallery()
                 {
                     page = 0,
                     section = Section.hot.ToString(),

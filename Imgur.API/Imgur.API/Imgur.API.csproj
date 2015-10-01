@@ -42,7 +42,26 @@
     <Compile Include="AsyncManualResetEvent.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="EndPoints\BasicEndPointOptions.cs" />
-    <Compile Include="EndPoints\Gallery\gallery.cs" />
+    <Compile Include="EndPoints\Conversation\GetConversation.cs" />
+    <Compile Include="EndPoints\Conversation\GetConversationList.cs" />
+    <Compile Include="EndPoints\Gallery\GeImagesOfGallery.cs" />
+    <Compile Include="EndPoints\Gallery\GetAccountAlbums.cs" />
+    <Compile Include="EndPoints\Gallery\GetAccountFavorites.cs" />
+    <Compile Include="EndPoints\Gallery\GetAutoComplete.cs" />
+    <Compile Include="EndPoints\Gallery\GetComments.cs" />
+    <Compile Include="EndPoints\Gallery\GetGalleryTopicImage.cs" />
+    <Compile Include="EndPoints\Gallery\GetMemeGallery.cs" />
+    <Compile Include="EndPoints\Gallery\GetGalleryImage.cs" />
+    <Compile Include="EndPoints\Gallery\GetRandomGalleryImages.cs" />
+    <Compile Include="EndPoints\Gallery\GetSearchGalleryImage.cs" />
+    <Compile Include="EndPoints\Gallery\GetUserComments.cs" />
+    <Compile Include="EndPoints\Gallery\GetUserGalleryFavorites.cs" />
+    <Compile Include="EndPoints\Gallery\GetUserSubmissions.cs" />
+    <Compile Include="EndPoints\Image\PostFavoriteAnImage.cs" />
+    <Compile Include="EndPoints\Gallery\PostGalleryComments.cs" />
+    <Compile Include="EndPoints\Gallery\PostGalleryCommentsReply.cs" />
+    <Compile Include="EndPoints\Image\PostVoteUpOrDownAnImage.cs" />
+    <Compile Include="EndPoints\RefreshTokenQuery.cs" />
     <Compile Include="EndPoints\Topics.cs" />
     <Compile Include="Exceptions\ApiException.cs" />
     <Compile Include="Exceptions\ServerErrorApiException.cs" />
@@ -50,10 +69,10 @@
     <Compile Include="Factory\HttpClientFactory.cs" />
     <Compile Include="Factory\IHttpClientFactory.cs" />
     <Compile Include="IApiRoot.cs" />
-    <Compile Include="Ioc\ISimpleIoc.cs" />
-    <Compile Include="Ioc\PreferredConstructorAttribute.cs" />
-    <Compile Include="Ioc\SimpleIoc.cs" />
     <Compile Include="Model\AccessToken.cs" />
+    <Compile Include="Model\Entities\AutoComplete.cs" />
+    <Compile Include="Model\Entities\Caption.cs" />
+    <Compile Include="Model\Entities\DataCaption.cs" />
     <Compile Include="Model\Enum\AccessTokenStatus.cs" />
     <Compile Include="Model\Enum\ApiExceptionType.cs" />
     <Compile Include="Model\Entities\account.cs" />
@@ -85,9 +104,10 @@
     <Compile Include="Model\Enum\Windows.cs" />
     <Compile Include="Model\Error.cs" />
     <Compile Include="Model\Requests\AdvRequest.cs" />
+    <Compile Include="Model\Requests\PostRequestBase.cs" />
     <Compile Include="Model\Requests\RequestBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\AuthenticatedServiceBase.cs" />
+    <Compile Include="Services\AuthenticationService\AuthenticatedServiceBase.cs" />
     <Compile Include="Services\AuthenticationService\AuthenticationService.cs" />
     <Compile Include="Services\AuthenticationService\AccessTokenEventArgs.cs" />
     <Compile Include="Services\AuthenticationService\IAuthenticationService.cs" />
@@ -96,8 +116,16 @@
     <Compile Include="Services\HttpServiceBase.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59d6d24383174ac4, processorArchitecture=MSIL">
-      <HintPath>..\packages\CommonServiceLocation.1.0.0\lib\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    <Reference Include="GalaSoft.MvvmLight, Version=5.1.1.35049, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.1.1.0\lib\portable-net45+wp8+wpa81+netcore45+monoandroid1+xamarin.ios10\GalaSoft.MvvmLight.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.1.1.35049, Culture=neutral, PublicKeyToken=669f0b5e8f868abf, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.1.1.0\lib\portable-net45+wp8+wpa81+netcore45+monoandroid1+xamarin.ios10\GalaSoft.MvvmLight.Extras.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -124,7 +152,6 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
