@@ -48,13 +48,13 @@ namespace Imgur.SampleApp
 
 
             var result = await ApiRoot.Instance.GetEndPointEntityAsync<RootElement<GalleryImage>>(
-                new GetGalleryImage	())Gallery()
+                new GetGalleryImage	()
                 {
                     page = 0,
                     section = Section.hot.ToString(),
                     showViral = true,
                     sort = Sort.top.ToString(),
-                    window = Imgur.API.Model.Enum.Windows.day.ToString(),
+                    window = WindowsSort.day.ToString(),
                 });
         }
     }

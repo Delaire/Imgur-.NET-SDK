@@ -13,8 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Imgur.SampleApp.Windows", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Imgur.SampleApp.WindowsPhone", "Imgur.SampleApp\Imgur.SampleApp.WindowsPhone\Imgur.SampleApp.WindowsPhone.csproj", "{0F353CE9-C741-4E74-9133-F8388E032A3B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelaireD", "DelaireD\DelaireD.csproj", "{E400B09D-55F4-494B-B596-8AF9F96708BE}"
-EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Imgur.SampleApp\Imgur.SampleApp.Shared\Imgur.SampleApp.Shared.projitems*{631bc080-db2b-44d8-b28b-674f826966a3}*SharedItemsImports = 4
@@ -86,16 +84,6 @@ Global
 		{0F353CE9-C741-4E74-9133-F8388E032A3B}.Release|x86.ActiveCfg = Release|x86
 		{0F353CE9-C741-4E74-9133-F8388E032A3B}.Release|x86.Build.0 = Release|x86
 		{0F353CE9-C741-4E74-9133-F8388E032A3B}.Release|x86.Deploy.0 = Release|x86
-		{E400B09D-55F4-494B-B596-8AF9F96708BE}.Debug|Any CPU.ActiveCfg = Release|Any CPU
-		{E400B09D-55F4-494B-B596-8AF9F96708BE}.Debug|Any CPU.Build.0 = Release|Any CPU
-		{E400B09D-55F4-494B-B596-8AF9F96708BE}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{E400B09D-55F4-494B-B596-8AF9F96708BE}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{E400B09D-55F4-494B-B596-8AF9F96708BE}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{E400B09D-55F4-494B-B596-8AF9F96708BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E400B09D-55F4-494B-B596-8AF9F96708BE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E400B09D-55F4-494B-B596-8AF9F96708BE}.Release|ARM.ActiveCfg = Release|Any CPU
-		{E400B09D-55F4-494B-B596-8AF9F96708BE}.Release|x64.ActiveCfg = Release|Any CPU
-		{E400B09D-55F4-494B-B596-8AF9F96708BE}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
