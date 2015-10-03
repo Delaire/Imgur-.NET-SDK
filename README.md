@@ -5,6 +5,7 @@ This is an  .NET SDK for the Imgur API
 This is an Beta and is currently working
 
 Appveyor CI:
+
 [![Build status](https://ci.appveyor.com/api/projects/status/3o5g55bkf0ouese0?svg=true)](https://ci.appveyor.com/project/Delaire/imgur-net-sdk)
 
 #Setting up
