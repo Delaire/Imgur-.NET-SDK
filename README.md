@@ -10,7 +10,7 @@ Appveyor CI:
 
 #Setting up
 
-you first neex to get your api key and secret for this work and to initialise it:
+you first need to get your api key and secret for this work and to initialise it:
 
     ApiRoot.Instance.Init("XXXXXXXX", "XXXXXX");
            
