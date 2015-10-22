@@ -14,7 +14,7 @@ you first need to get your api key and secret for this work and to initialise it
 
     ApiRoot.Instance.Init("XXXXXXXX", "XXXXXX");
            
-Here is example of how the api works with the GetEndPointEntityAsync methode:
+Here is example of how the api works with the GetEndPointEntityAsync method:
 
               	ApiRoot.Instance.GetEndPointEntityAsync<RootElement<Data_Format_we_will_recieve>>(
                                          new Data_to_get()
