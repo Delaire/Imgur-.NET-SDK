@@ -29,7 +29,7 @@ Here is an example for how you can make a call:
                 new GetGalleryImage	()
                 {
                     page = 0,
-                    section = Section.hot.ToString(),
+                    section = Section.hot.ToString(),  <-- this could be improved
                     showViral = true,
                     sort = Sort.top.ToString(),
                     window = WindowsSort.day.ToString(),
