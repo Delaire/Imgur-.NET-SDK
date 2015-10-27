@@ -1,1 +1,1 @@
- ApiRoot.Instance.Init("5fd974550", "ef3791b86c96ef");
+ ApiRoot.Instance.Init("ABCDEF", "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx");
